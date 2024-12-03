@@ -1,0 +1,126 @@
+
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    background-color: silver; 
+    font-family: Arial, sans-serif; 
+}
+
+a {
+    color: white;
+    text-decoration: none; 
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+/*header {
+    text-align: center;
+    padding: 2px;
+}*/
+
+.index-page {
+    background-image: url('images/port9'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    font-family: Arial, sans-serif;text-align: center;
+}
+
+.about {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 20px;
+    gap: 20px; /
+    
+}
+
+.profile-photo {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    margin-bottom: 20px; 
+    object-fit: cover; /* Ensures the image doesn't stretch */
+}
+
+.about-text {
+    max-width: 60%; /* Restrict text width for better readability */
+    font-size: 16px;
+    line-height: 
+    color: #333;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center-align text */
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.nav {
+    display: flex; 
+    justify-content: center; 
+    padding: 10px;
+    /*background-color: rgb(12, 34, 44); /* Optional background for navbar */*/
+}
+
+.nav ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+}
+
+.nav li {
+    margin: 0 20px; /* Horizontal space between links */
+}
+
+.nav a {
+    color: white; 
+    text-decoration:underline; /* Remove underline */
+    font-weight: bold;
+    font-size: 18px; 
+}
+
+.nav a:hover {
+    text-decoration: underline; 
+}
+
+
+.project-header {
+    background-color:  rgb(236, 141, 46); /* Background color for the header */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Padding for spacing */
+    font-size: 24px; /* Adjust font size */
+}
+
+.project-list {
+    list-style-type: none; /* Remove bullet points */
+    margin: 20px; /* Add margin around the list */
+}
+
+.project-item {
+    font-size: 20px; /* Font size for the project items */
+    background-color: silver; /* Background color for list items */
+    margin-bottom: 15px; /* Spacing between items */
+    padding: 15px; /* Padding within list items */
+    border: 1px solid #ccc; /* Optional border for items */
+    border-radius: 5px; /* Optional rounded corners */
+}
+
+.project-item p {
+    margin-top: 10px; /* Space above the project description */
+}
