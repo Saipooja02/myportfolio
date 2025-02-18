@@ -3,26 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".nav a").forEach(anchor => {
+                anchor.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .index-section {
+            background-color: rgb(81, 10, 73);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 15px;
+        }
+        h2{
+            color: white;
+        }
+        p{
+            color: rgb(217, 206, 206);
+        }
+        .animated-text {
+            display: inline-block;
+            font-size: 30px; /* Adjust font size as needed */
+            color: #40ff00; /* Change text color if desired */
+            animation: fadeIn 1s ease-in-out infinite alternate;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
-<style>
-    *{
-        margin: 0%;
-        padding: 0%;
-        box-sizing: border-box;
-    }
-</style>
-<body class="index-page">
-        <h1 style="padding-bottom: 5%;color: white; background-color:rgb(81, 10, 73); padding: 2px;padding-bottom: 5px;"> My Portfolio</h1>
-        <p style="padding: top 20px;padding-bottom: 2px; color:white;font-size: 30px; margin-top: 100px;"> Hello! I am Koyyada Saipooja.</p>
-
-    <nav class="nav" style="padding-top: 2%;">
-        <ul>
-            <li style="font-size: 150;"><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="section index-section">
+        <h1>Hello! I am Koyyada Saipooja.</h1>
+        <h2 class="animated-text">Full Stack Developer</h2> <!-- Animated Text -->
+    </section>
+    
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <img src="images/myimage2.jpg" alt="My Photo" class="profile-photo">
+        <p class="highlight" style="color: white;">Aspiring Software Engineer | Passionate About AIML & Web Development</p>
+        <p>Hello! I am <strong>Koyyada Saipooja</strong>, currently pursuing a <strong>B.Tech</strong> in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning. My academic background, combined with hands-on experience in programming languages such as <strong>Java, Python, HTML, CSS, and JavaScript</strong>, has prepared me for a diverse range of roles in software engineering.</p>
+        <p>I have also completed a certification in <strong>Generative AI</strong> from LinkedIn, which has deepened my understanding of AI's transformative potential. While I am passionate about AIML and Web Development, I am equally interested in exploring broader software engineering roles that align with my skills and education.</p>
+        <p>I am actively seeking <strong>internships and job opportunities</strong> where I can apply my expertise, contribute to innovative projects, and continue growing as a software engineer. In addition to my technical skills, I am an avid nature photographer and love capturing the beauty of the natural world through my mobile lens.</p>
+    </section>
+    
+    <section id="projects" class="section">
+        <h2 style="padding: 20px;">Projects</h2>
+        <ul class="project-list">
+            <li class="project-item" style="color: whitesmoke;">
+                <strong>Project 1: Portfolio Website using HTML and CSS</strong>
+                <p>Created a personal portfolio website to showcase my projects and skills. This responsive web application highlights my work in web development.</p>
+            </li>
+            <li class="project-item" style="color: whitesmoke;">
+                <strong>Project 2: Employee Management System</strong> - A Web-Based Solution (Group Project)
+                <p>Developed a comprehensive employee management system to streamline operations and enhance user experience. This web application centralizes employee information, facilitating efficient resource allocation and effective communication.</p>
+            </li>
         </ul>
-    </nav>
+    </section>
+    
+    <section id="contact" class="section">
+        <h2 style="padding: 20px ">Contact Me</h2>
+        <p style="color: white;padding:10px">Email: poojasai0207@gmail.com</p>
+        <p style="padding: 10px;">LinkedIn: <a style="color:rgb(224, 224, 13);"href ="https://linkedin.com/in/koyyadasaipooja" target="_blank">Profile</a></p>
+        <p>GitHub: <a style="color: rgb(224, 224, 13);" href="https://github.com/Saipooja02" target="_blank">Profile</a></p>
+    </section>
 </body>
 </html>
