@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".nav a").forEach(anchor => {
+                anchor.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .index-section {
+            background-color: rgb(81, 10, 73);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 15px;
+        }
+        h2{
+            color: white;
+        }
+        p{
+            color: rgb(217, 206, 206);
+        }
+        .animated-text {
+            display: inline-block;
+            font-size: 30px; /* Adjust font size as needed */
+            color: #40ff00; /* Change text color if desired */
+            animation: fadeIn 1s ease-in-out infinite alternate;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="section index-section">
+        <h1>Hello! I am Koyyada Saipooja.</h1>
+        <h2 class="animated-text">Full Stack Developer</h2> <!-- Animated Text -->
+    </section>
+    
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <img src="images/myimage2.jpg" alt="My Photo" class="profile-photo">
+        <p class="highlight" style="color: white;">Aspiring Software Engineer | Passionate About AIML & Web Development</p>
+        <p>Hello! I am <strong>Koyyada Saipooja</strong>, currently pursuing a <strong>B.Tech</strong> in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning.
+<P>
+    I'm passionate about <strong> Web Development</strong>  and skilled in <strong>Java, HTML, CSS, JavaScript, Node.js, and React</strong> focusing on the <strong>Mern Stack</strong>.
+    I'm looking for <strong>
+        Internships or job opportunities
+    </strong> where I can grow as a developer and work on exciting projects. In my free time, I enjoy <strong>nature photography</strong> with my phone.
+    
+</P>
+
+
+        <section id="projects" class="section">
+            <h2 style="padding: 20px; color: white;">Projects</h2>
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="images/project images/youtube.webp" alt="Youtube-UI" class="project-image">
+                    <h3>Youtube-UI</h3>
+                    <p>This project is a front-end clone of the YouTube homepage built using HTML and CSS. It features a responsive layout with a header, sidebar navigation, and a grid of video thumbnails, mimicking the look and feel of the original YouTube interface</p>
+                    <a href="https://github.com/Saipooja02/youtube-homepage-ui" target="_blank">
+                        <button class="project-btn">Code</button>
+                    </a>
+                    <a href="https://saipooja02.github.io/youtube-homepage-ui/" target="_blank">
+                        <button class="project-btn">view</button>
+                    </a>
+                </div>
+        
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="images/project images/mystore.png" alt="Mystore" class="project-image">
+                    <h3>My-store</h3>
+                    <p> This is a simple product display page for an online store, showing items with images, descriptions, prices, and "Add to Cart" buttons, along with a top navigation bar.</p>
+                    <a href="https://github.com/Saipooja02/youtube-homepage-ui" target="_blank">
+                        <button class="project-btn">Code</button>
+                    </a>
+                    <a href="https://saipooja02.github.io/youtube-homepage-ui/" target="_blank">
+                        <button class="project-btn">view</button>
+                    </a>
+                    
+                </div>
+        
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="images/project images/bank.jpg" alt="Banking-App" class="project-image">
+                    <h3>Banking-App</h3>
+                    <p>A simple frontend app using HTML, CSS, and JavaScript that allows users to register, log in, and manage deposits or withdrawals. User data is stored with localStorage.</p>
+                    <a href="https://github.com/Saipooja02/banking-app" target="_blank">
+                        <button class="project-btn">Code</button>
+                    </a>
+                    <a href="https://saipooja02.github.io/banking-app/" target="_blank">
+                        <button class="project-btn">view</button>
+                    </a>
+                </div>
+        
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <img src="images/project4.jpg" alt="Project4" class="project-image">
+                    <h3>Project4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto, laborum doloribus accusamus explicabo, odio assumenda, accusantium labore repellat nesciunt est dignissimos ducimus magnam. Inventore odio voluptate quas velit delectus.</p>
+                    <a href="https://github.com/Saipooja02/youtube-homepage-ui" target="_blank">
+                        <button class="project-btn">Code</button>
+                    </a>
+                    <a href="https://saipooja02.github.io/youtube-homepage-ui/" target="_blank">
+                        <button class="project-btn">view</button>
+                    </a>
+                </div>
+        
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <img src="images/project/" alt="project5" class="project-image">
+                    <h3>Project5</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, autem eligendi ab molestias, voluptas, accusamus eaque totam obcaecati laborum saepe necessitatibus perferendis assumenda? Minus eos reiciendis recusandae est deleniti tempora!p>
+                    <a href="https://github.com/Saipooja02/youtube-homepage-ui" target="_blank">
+                        <button class="project-btn">Code</button>
+                    </a>
+                    <a href="https://saipooja02.github.io/youtube-homepage-ui/" target="_blank">
+                        <button class="project-btn">view</button>
+                    </a>
+                </div>
+        
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <img src="images/project6.jpg" alt="project6" class="project-image">
+                    <h3>Project6</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nesciunt quam illum tempore ad modi possimus placeat aliquid provident vel est ut, nostrum laborum natus? Voluptas, vitae. Laboriosam, impedit nobis..</p>
+                    <a href="https://github.com/Saipooja02/youtube-homepage-ui" target="_blank">
+                        <button class="project-btn">Code</button>
+                    </a>
+                    <a href="https://saipooja02.github.io/youtube-homepage-ui/" target="_blank">
+                        <button class="project-btn">view</button>
+                    </a>
+                </div>
+        
+                <!-- Project 7 -->
+                <div class="project-card">
+                    <img src="images/project7.jpg" alt="project7" class="project-image">
+                    <h3>project7</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque earum vitae, eveniet harum, voluptatibus magni nam amet voluptates labore delectus iure, impedit quo cupiditate soluta ullam vero maiores dolorum fugit.</p>
+                    <a href="https://github.com/Saipooja02/youtube-homepage-ui" target="_blank">
+                        <button class="project-btn">Code</button>
+                    </a>
+                    <a href="https://saipooja02.github.io/youtube-homepage-ui/" target="_blank">
+                        <button class="project-btn">view</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <div class="contact-form">
+              <h2>Contact Me</h2>
+              <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+              </form>
+            </div>
+          
+            <div class="contact-links">
+              <p>Or connect with me here:</p>
+              <a href="https://www.linkedin.com/in/koyyadasaipooja/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/Saipooja02" target="_blank">GitHub</a>
+              <a href="mailto:poojasai0207@gmail.com" target="_blank">Email</a>
+              <a href="https://wa.me/919959130963" target="_blank">WhatsApp</a>
+            </div>
+          </section>
+          
+          
+  
+</body>
+</html>
